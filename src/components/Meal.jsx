@@ -24,7 +24,11 @@ const Accordion = styled((props) => (
 
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
+    expandIcon={
+      <ArrowForwardIosSharpIcon
+        sx={{ fontSize: '0.9rem', color: `rgba(255, 255, 255 ,0.8)` }}
+      />
+    }
     {...props}
   />
 ))(({ theme }) => ({
@@ -73,6 +77,7 @@ const Meal = ({ meal, title, eatenFood }) => {
       }}
     >
       <AccordionSummary
+        sx={{ background: `rgba(0,101,101 ,0.3)` }}
         aria-controls="panel1d-content"
         id="panel1d-header"
         onClick={() => setMealExpanded(!expandedMeal)}
@@ -87,7 +92,9 @@ const Meal = ({ meal, title, eatenFood }) => {
             {title}
           </Typography>
           {mealComplited.length > 0 && mealComplited.length < meal.length && (
-            <Typography sx={{ color: '#006565' }}>{mealCount}</Typography>
+            <Typography sx={{ color: `rgba(255, 255, 255 ,0.8)` }}>
+              {mealCount}
+            </Typography>
           )}
           {mealComplited.length === meal.length && (
             <NoFoodTwoToneIcon sx={{ color: 'rgba(255,255,255, 0.8)' }} />
@@ -102,7 +109,7 @@ const Meal = ({ meal, title, eatenFood }) => {
                 onClick={() => eatenFood(text.id)}
                 direction="row"
                 justifyContent="space-between"
-                alignItems="flex-start"
+                alignItems="center"
                 divider={<Divider flexItem />}
               >
                 <Typography

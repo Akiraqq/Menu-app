@@ -143,12 +143,12 @@ const Day = ({ meal, setAllMenu }) => {
           color: '#fff',
           background: `rgba(0,101,101 ,0.6)`,
           position: 'fixed',
-          top: {
-            lg: '88vh',
-            xl: '88vh',
-            md: '88vh',
-            sm: '88vh',
-            xs: '88vh',
+          bottom: {
+            lg: '4vh',
+            xl: '4vh',
+            md: '4vh',
+            sm: '4vh',
+            xs: '4vh',
           },
           right: {
             lg: '50vh',

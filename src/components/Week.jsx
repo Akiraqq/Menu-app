@@ -26,8 +26,8 @@ const Week = ({ weekMenu, setAllMenu }) => {
           fontWeight: 'fontWeightLight',
         }}
         m={1.6}
-        mt={5}
-        mb={4}
+        mt={4}
+        mb={2}
       >
         Оберiть день
       </Typography>
@@ -50,7 +50,9 @@ const Week = ({ weekMenu, setAllMenu }) => {
                 aria-controls="panel-content"
                 id="panel-header"
               >
-                <Typography sx={{ color: '#006565' }}>{meal.title}</Typography>
+                <Typography sx={{ color: '#006565', fontSize: 'large' }}>
+                  {meal.title}
+                </Typography>
               </AccordionSummary>
               <AccordionDetails>
                 <Day

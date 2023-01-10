@@ -23,8 +23,8 @@ const DailyMenu = ({ menuOfTheDay, removeMenu, eatenFood }) => {
           fontWeight: 'fontWeightLight',
         }}
         m={1.6}
-        mt={5}
-        mb={4}
+        mt={4}
+        mb={2}
       >
         Меню дня
       </Typography>
@@ -43,12 +43,13 @@ const DailyMenu = ({ menuOfTheDay, removeMenu, eatenFood }) => {
       <Fab
         sx={{
           position: 'fixed',
-          top: {
-            lg: '88vh',
-            xl: '88vh',
-            md: '88vh',
-            sm: '88vh',
-            xs: '88vh',
+
+          bottom: {
+            lg: '4vh',
+            xl: '4vh',
+            md: '4vh',
+            sm: '4vh',
+            xs: '4vh',
           },
           right: {
             lg: '50vh',
