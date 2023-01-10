@@ -88,7 +88,9 @@ const Meal = ({ meal, title, eatenFood }) => {
           justifyContent="space-between"
           alignItems="center"
         >
-          <Typography sx={{ color: `rgba(255, 255, 255 ,0.8)` }}>
+          <Typography
+            sx={{ color: `rgba(255, 255, 255 ,0.8)`, fontSize: '18px' }}
+          >
             {title}
           </Typography>
           {mealComplited.length > 0 && mealComplited.length < meal.length && (
