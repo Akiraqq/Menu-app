@@ -96,7 +96,7 @@ const Week = ({ weekMenu, setAllMenu }) => {
           direction="row"
           justifyContent="space-between"
           spacing={0}
-          width="114px"
+          width="117px"
         >
           <FormControlLabel
             sx={{ opacity: 0.6 }}
