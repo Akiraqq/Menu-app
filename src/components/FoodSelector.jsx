@@ -9,14 +9,21 @@ export default function FoodSelector({
   foodKey,
   setAllMenu,
   isMenuReady,
+  lessThanEighty,
 }) {
   const [selectedFood, setSelectedFood] = React.useState(
-    `${food[foodKey[0]]} ${foodKey[1]}`
+    `${food[foodKey[0]]} ${Math.round(foodKey[1] * lessThanEighty)} гр`
   )
 
   const handleChange = (event) => {
     setSelectedFood(event.target.value)
   }
+  React.useEffect(() => {
+    setSelectedFood(
+      `${food[foodKey[0]]} ${Math.round(foodKey[1] * lessThanEighty)} гр`
+    )
+  }, [lessThanEighty])
+
   React.useEffect(
     () => {
       setAllMenu && setAllMenu(selectedFood)
@@ -43,7 +50,10 @@ export default function FoodSelector({
           onChange={handleChange}
         >
           {food.map((name) => (
-            <MenuItem key={name} value={`${name} ${foodKey[1]}`}>
+            <MenuItem
+              key={name}
+              value={`${name} ${Math.round(foodKey[1] * lessThanEighty)} гр`}
+            >
               <Typography sx={{ color: '#006565' }}> {name}</Typography>
             </MenuItem>
           ))}

@@ -44,7 +44,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }))
 
-const Day = ({ meal, setAllMenu }) => {
+const Day = ({ meal, setAllMenu, lessThanEighty }) => {
   const [isMenuReady, setMenuReady] = React.useState(true)
 
   return (
@@ -64,6 +64,7 @@ const Day = ({ meal, setAllMenu }) => {
           {meal.breakfast.map((breakfast, i) => {
             return (
               <FoodSelector
+                lessThanEighty={lessThanEighty}
                 key={i}
                 food={breakfast[1]}
                 foodKey={breakfast[0]}
@@ -85,6 +86,7 @@ const Day = ({ meal, setAllMenu }) => {
           {meal.snack.map((snack, i) => {
             return (
               <FoodSelector
+                lessThanEighty={lessThanEighty}
                 key={i}
                 food={snack[1]}
                 foodKey={snack[0]}
@@ -106,6 +108,7 @@ const Day = ({ meal, setAllMenu }) => {
           {meal.lunch.map((lunch, i) => {
             return (
               <FoodSelector
+                lessThanEighty={lessThanEighty}
                 key={i}
                 food={lunch[1]}
                 foodKey={lunch[0]}
@@ -127,6 +130,7 @@ const Day = ({ meal, setAllMenu }) => {
           {meal.dinner.map((dinner, i) => {
             return (
               <FoodSelector
+                lessThanEighty={lessThanEighty}
                 key={i}
                 food={dinner[1]}
                 foodKey={dinner[0]}
